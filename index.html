@@ -4,11 +4,11 @@
         <title>Ganesh-Food Ordering</title>
         <style>
             #lar{
-                width: 100%;
+                width: 1500;
                 height: 70%;
             }
             #chef1{
-                padding-left: 13%;
+                padding-left: 200;
                 height: 500px;
                 width: 450px;
             }
@@ -22,7 +22,6 @@
                 display: inline;
             }
             h1{
-                /* color: magenta; */
                 padding-top: 50px;
                 text-align: center;
             }
@@ -33,9 +32,6 @@
                 padding-left: 20%;
                 color: blue;
             }
-            /* body{
-                background-color:peachpuff;
-            } */
             label{
                 font-size: 25px;
                 padding-right: 120px;
@@ -44,42 +40,36 @@
                 background-color: cyan;
                 font-size: 20px;
                 padding:10px;
+                cursor:pointer;
             }
-            /* #abo{
-                padding-bottom: 5%;
-            } */
             #hea{
                 background-color: burlywood;
-            padding: px;
-            width: 100%;
+            width: 1500;
             }
             footer{
-                /* text-align: center; */
                 height: 70px;
             background-color: black;
             padding: 10px;
-            width: 100%;
+            width: 1500;
             color: white;
             }
             header{
-                /* text-align: center; */
             background-color: #f2f2f2;
             margin: 0px;
-            /* padding-top: 10%; */
-            width: 100%;
+            width: 1500;
             }
             #abou {
-                /* padding-top: 115%; */
                 font-family: Arial, sans-serif;
                 line-height: 1.6;
-                /* background-color: cyan; */
-                /* margin: 20px; */
             }
             #co {
                 background-color:burlywood;
             }
             #co1 {
                 color: #666;
+            }
+            a{
+                text-decoration: none;
             }
         </style>
     </head>
@@ -95,7 +85,6 @@
         <br>
         <br>
         <br>
-                    <!-- <h2 style="padding-top: 285px;">Burger</h2> -->
         <div id="abo">
 
             <header>
@@ -132,8 +121,8 @@
             <br>
             <br>
             <footer>
-                <center><p>Contact us: <a href="mailto:info@ganeshfoodordering.com">info@yourfoodordering.com</a></p><br>
-                <h3>Thanks for visiting</h3></center>
+                <center><p>Contact us: <a href="#">info@yourfoodordering.com</a></p><br>
+                <h3>Thanks for visiting | Desinged by Ganesh</h3></center>
             </footer>
         </div>
         <script>
@@ -198,25 +187,25 @@
                 window.location.href='f1.html?v=' + v;
             }
             let ar=[
-                {img:"url(a.jpeg)",top:"120%",right:"58%",click:"f1()",position:"center",price:"100"},
-                {img:"url(b.jpeg)",top:"120%",right:"25%",click:"f2()",position:"center",price:"120"},
-                {img:"url(c.jpeg)",top:"120%",right:"-8%",click:"f3()",position:"center",price:"50"},   
-                {img:"url(d.jpg)",top:"185%",right:"58%",click:"f4()",position:"center",price:"80"},
-                {img:"url(e.jpg)",top:"185%",right:"25%",click:"f5()",position:"center",price:"70"},
-                {img:"url(f.jpg)",top:"185%",right:"-8%",click:"f6()",position:"center",price:"90"},
-                {img:"url(g.jpeg)",top:"250%",right:"58%",click:"f7()",position:"center",price:"30"},
-                {img:"url(h.jpg)",top:"250%",right:"25%",click:"f8()",position:"center",price:"300"},
-                {img:"url(i.webp)",top:"250%",right:"-8%",click:"f9()",position:"center",price:"30"},
-                {img:"url(j.jpg)",top:"315%",right:"58%",click:"f10()",position:"center",price:"50"},
-                {img:"url(k.jpeg)",top:"315%",right:"25%",click:"f11()",position:"center",price:"150"},
-                {img:"url(l.jpeg)",top:"315%",right:"-8%",click:"f12()",position:"center",price:"60"}
+                {img:"url(a.jpeg)",top:"870",right:"250",click:"f1()",position:"center",price:"100"},
+                {img:"url(b.jpeg)",top:"870",right:"725",click:"f2()",position:"center",price:"120"},
+                {img:"url(c.jpeg)",top:"870",right:"1200",click:"f3()",position:"center",price:"50"},   
+                {img:"url(d.jpg)",top:"1340",right:"250",click:"f4()",position:"center",price:"80"},
+                {img:"url(e.jpg)",top:"1340",right:"725",click:"f5()",position:"center",price:"70"},
+                {img:"url(f.jpg)",top:"1340",right:"1200",click:"f6()",position:"center",price:"90"},
+                {img:"url(g.jpeg)",top:"1820",right:"250",click:"f7()",position:"center",price:"30"},
+                {img:"url(h.jpg)",top:"1820",right:"725",click:"f8()",position:"center",price:"300"},
+                {img:"url(i.webp)",top:"1820",right:"1200",click:"f9()",position:"center",price:"30"},
+                {img:"url(j.jpg)",top:"2290",right:"250",click:"f10()",position:"center",price:"50"},
+                {img:"url(k.jpeg)",top:"2290",right:"725",click:"f11()",position:"center",price:"150"},
+                {img:"url(l.jpeg)",top:"2290",right:"1200",click:"f12()",position:"center",price:"60"}
                 
             ]
             
             var p="";
             for(let i=0;i<ar.length;i++)
             {
-            p+='<div style="padding-top: 330px;width:400;height:400px;background-image:'+ar[i].img+';background-size: cover;background-repeat: no-repeat;background-position:'+ar[i].position+';top:'+ar[i].top+';right:'+ar[i].right+';  position:absolute;transform:translate(-50%,-50%);box-sizing:border-box;border-radius:10px;text-align:center;line-height:20px;"><label style="font-size: 25px;padding-right: 120px;color:yellow">price:'+ar[i].price+'</label><input type="button" value="place order" id="button" onclick="'+ar[i].click+'"></div>'
+            p+='<div style="padding-top: 330px;width:400;height:400px;background-image:'+ar[i].img+';background-size: cover;background-repeat: no-repeat;background-position:'+ar[i].position+';top:'+ar[i].top+';left:'+ar[i].right+';  position:absolute;transform:translate(-50%,-50%);box-sizing:border-box;border-radius:10px;text-align:center;line-height:20px;"><label style="font-size: 25px;padding-right: 120px;color:yellow">price:'+ar[i].price+'</label><input type="button" value="place order" id="button" onclick="'+ar[i].click+'"></div>'
             }
             document.getElementById("msg").innerHTML=p;
             let br=[
