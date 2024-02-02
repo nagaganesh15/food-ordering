@@ -1,0 +1,286 @@
+<html>
+    <head>
+        <title>Order Page</title>
+        <style>
+            
+            body{
+                background-image: url(fm2.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            table{
+                /* padding-left: 500px; */
+                border: 5px;
+                font-size: 20px;
+                margin-top: 100px;
+                /* width: 500px; */
+            }
+            #ta{
+                height: 90px;
+                width: 250px;
+            }
+            #sell{
+                font-size: 17px;
+                background-color: aquamarine;
+            }
+            #sel{
+                font-size: 17px;
+            }
+            #im{
+                display: none;
+            }
+            #err{
+                color: red;
+                display: none;
+            }
+            #p{
+                color: green;
+                display: none;
+            }
+            #ima{
+                padding-top: 10px;
+                height: 300px;
+                width: 300px;
+                /* padding-left: 70%; */
+                /* padding: 50%; */
+            }
+
+        </style>
+    </head>
+    <body>
+        <!-- <img src="chef.jpeg" alt="chef photo" id="ima"> -->
+        <center>
+            
+            <table cellspacing="15">
+
+                <tr>
+                    <td rowspan="7">
+                        <div id="gan" >
+
+                        </div>
+                        <!-- <img src="chef.jpeg" alt="chef photo" id="ima"> -->
+                    </td>
+                    <td>
+                        <label>Name Of Food Item :</label>
+                    </td>
+                    <td>
+                        <label id="na">Burger</label>
+                    </td>
+                    <td rowspan="7">
+                        <img src="chef.jpeg" alt="chef photo" id="ima">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Name :</label>
+                    </td>
+                    <td>
+                        <input type="text" id="tex">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Quantity :</label>
+                    </td>
+                    <td>
+                        <input type="number" value="1" oninput="pri()" id="num">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Price :</label>
+                    </td>
+                    <td>
+                        <label id="lab">100</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Address :</label>
+                    </td>
+                    <td>
+                        <textarea id="ta"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Phone Number :</label>
+                    </td>
+                    <td>
+                        <input type="number" id="pho">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Payment Type :</label>
+                    </td>
+                    <td>
+                        <select id="sel" onchange="sel()">
+                            <option>select</option>
+                            <option value="cash">Cash On Delivory</option>
+                            <option value="online">Online Payment</option>
+                        </select> 
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <img src="qr.jpeg" alt="payment QRcode" id="im">
+            <br>
+            <input type="button" value="sumbit" id="sell" onclick="sub()">
+            <h3 id="err"></h3>
+            <h2 id="p"></h2>
+        </center>
+            
+        
+        <script>
+            var u = new URLSearchParams(window.location.search);
+            var p1 = u.get('v');
+            var fir=p1[0];
+            var p2=parseInt(p1.slice(1));
+            document.getElementById('lab').innerHTML=p2;
+            // gan='<img src="'+fir+'.jpeg">'
+            // document.getElementById('gan').innerHTML=gan;
+            if(fir=='a')
+            {
+            document.getElementById('na').innerHTML="Burger";
+            gan='<img src="a.jpeg" style="height: 300px;width: 300px;">'
+            document.getElementById('gan').innerHTML=gan;
+            }
+            else if(fir=='b')
+            {
+            document.getElementById('na').innerHTML="Pizza";
+            gan='<img src="b.jpeg" style="height: 300px;width: 300px;">'
+            document.getElementById('gan').innerHTML=gan;
+            }
+            else if(fir=='c')
+            {
+            document.getElementById('na').innerHTML="Dosa";
+            gan='<img src="c.jpeg" style="height: 300px;width: 300px;">'
+            document.getElementById('gan').innerHTML=gan;
+            }
+            else if(fir=='d')
+            {
+            document.getElementById('na').innerHTML="Gobi";
+            gan='<img src="d.jpg" style="height: 300px;width: 300px;">'
+            document.getElementById('gan').innerHTML=gan;
+            }
+            else if(fir=='e')
+            {
+            document.getElementById('na').innerHTML="Noddles";
+            gan='<img src="e.jpg" style="height: 300px;width: 300px;">'
+            document.getElementById('gan').innerHTML=gan;
+            }
+            else if(fir=='f')
+            {
+            document.getElementById('na').innerHTML="Sandwich";
+            gan='<img src="f.jpg" style="height: 300px;width: 300px;">'
+            document.getElementById('gan').innerHTML=gan;
+            }
+            else if(fir=='g')
+            {
+            document.getElementById('na').innerHTML="Samosa";
+            gan='<img src="g.jpeg"style="height: 300px;width: 300px;">'
+            document.getElementById('gan').innerHTML=gan;
+            }
+            else if(fir=='h')
+            {
+            document.getElementById('na').innerHTML="Cake";
+            gan='<img src="h.jpg" style="height: 300px;width: 300px;">'
+            document.getElementById('gan').innerHTML=gan;
+            }
+            else if(fir=='i')
+            {
+            document.getElementById('na').innerHTML="Pav Bhaji";
+            gan='<img src="i.webp" style="height: 300px;width: 300px;">'
+            document.getElementById('gan').innerHTML=gan;
+            }
+            else if(fir=='j')
+            {
+            document.getElementById('na').innerHTML="Egg Roll";
+            gan='<img src="j.jpg" style="height: 300px;width: 300px;">'
+            document.getElementById('gan').innerHTML=gan;
+            }
+            else if(fir=='k')
+            {
+            document.getElementById('na').innerHTML="Biriyani";
+            gan='<img src="k.jpeg"style="height: 300px;width: 300px;">'
+            document.getElementById('gan').innerHTML=gan;
+            }
+            else if(fir=='l')
+            {
+            document.getElementById('na').innerHTML="Finger Chips";
+            gan='<img src="l.jpeg" style="height: 300px;width: 300px;">'
+            document.getElementById('gan').innerHTML=gan;
+            }
+            function pri()
+            {
+                let a=document.getElementById('num').value;
+                let b=a*p2;
+                document.getElementById('lab').innerHTML=b;
+            }
+            function sel()
+            {
+                let a=document.getElementById('sel').value;
+                if(a==='cash')
+                {
+                    im.style.display = 'none';
+                }
+                else if(a==='online')
+                {
+                    im.style.display = 'block';
+                }
+                else if(a==='select')
+                {
+                    im.style.display = 'none';
+                }
+            }
+            function sub()
+            {
+                let a=document.getElementById('num').value;
+                let e=document.getElementById('tex').value;
+                let b=document.getElementById('pho').value;
+                let c=document.getElementById('ta').value;
+                let d=document.getElementById('sel').value;
+                if(a<=0)
+                {
+                    document.getElementById('err').innerHTML="please give proper quantity";
+                    err.style.display = 'block';
+                    p.style.display = 'none';
+                }
+                else if(e.length==0)
+                {
+                    document.getElementById('err').innerHTML="please give proper Name";
+                    err.style.display = 'block';
+                    p.style.display = 'none';
+                }
+                else if(c.length==0)
+                {
+                    document.getElementById('err').innerHTML="please give proper Address";
+                    err.style.display = 'block';
+                    p.style.display = 'none';
+                }
+                else if(b.length!=10)
+                {
+                    document.getElementById('err').innerHTML="please give proper phone number";
+                    err.style.display = 'block';
+                    p.style.display = 'none';
+                }
+                else if(d=='select')
+                {
+                    document.getElementById('err').innerHTML="please give proper payment type";
+                    err.style.display = 'block';
+                    p.style.display = 'none';
+                }
+                else
+                {
+                    document.getElementById('p').innerHTML="Have the Delicious Food";
+                    err.style.display = 'none';
+                    p.style.display = 'block';
+                }   
+            }
+            
+        </script>
+
+
+    </body>
+</html>
